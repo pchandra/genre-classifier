@@ -26,7 +26,7 @@ class Data():
                 TRACKPATH   = GENREPATH + track
                 print("%d.%s\t\t%s (%d)" % (i + 1, genre, TRACKPATH, j + 1))
                 y, sr       = load(TRACKPATH, mono=True)
-                S           = melspectrogram(y, sr).T
+                S           = melspectrogram(y=y, sr=sr).T
                 S           = S[:-1 * (S.shape[0] % 128)]
                 num_chunk   = S.shape[0] / 128
                 data_chunks = np.split(S, num_chunk)

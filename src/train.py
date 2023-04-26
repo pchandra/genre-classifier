@@ -56,7 +56,7 @@ def main():
 
             pred_train_batch    = net(x_train_batch)
             loss_train_batch    = criterion(pred_train_batch, y_train_batch)
-            train_loss          += loss_train_batch.data.cpu().numpy()[0]
+            train_loss          += loss_train_batch.data.cpu().numpy()
 
             loss_train_batch.backward()
         optimizer.step()  # <-- OPTIMIZER
@@ -66,7 +66,7 @@ def main():
         for i in range(0, TRAIN_SIZE, BATCH_SIZE):
             pred_train      = net(inp_train[i:i + BATCH_SIZE])
             indices_train   = pred_train.max(1)[1]
-            train_sum       += (indices_train == out_train[i:i + BATCH_SIZE]).sum().data.cpu().numpy()[0]
+            train_sum       += (indices_train == out_train[i:i + BATCH_SIZE]).sum().data.cpu().numpy()
         train_accuracy  = train_sum / float(TRAIN_SIZE)
 
         # ------------------------------------------------------------------------------------------------- #
@@ -78,14 +78,14 @@ def main():
 
             pred_valid_batch    = net(x_valid_batch)
             loss_valid_batch    = criterion(pred_valid_batch, y_valid_batch)
-            valid_loss          += loss_valid_batch.data.cpu().numpy()[0]
+            valid_loss          += loss_valid_batch.data.cpu().numpy()
 
         epoch_valid_loss    = (valid_loss * BATCH_SIZE) / VALID_SIZE
         valid_sum           = 0
         for i in range(0, VALID_SIZE, BATCH_SIZE):
             pred_valid      = net(inp_valid[i:i + BATCH_SIZE])
             indices_valid   = pred_valid.max(1)[1]
-            valid_sum       += (indices_valid == out_valid[i:i + BATCH_SIZE]).sum().data.cpu().numpy()[0]
+            valid_sum       += (indices_valid == out_valid[i:i + BATCH_SIZE]).sum().data.cpu().numpy()
         valid_accuracy  = valid_sum / float(VALID_SIZE)
 
         print("Epoch: %d\t\tTrain loss : %.2f\t\tValid loss : %.2f\t\tTrain acc : %.2f\t\tValid acc : %.2f" % \
@@ -107,7 +107,7 @@ def main():
     for i in range(0, TEST_SIZE, BATCH_SIZE):
         pred_test       = net(inp_test[i:i + BATCH_SIZE])
         indices_test    = pred_test.max(1)[1]
-        test_sum        += (indices_test == out_test[i:i + BATCH_SIZE]).sum().data.cpu().numpy()[0]
+        test_sum        += (indices_test == out_test[i:i + BATCH_SIZE]).sum().data.cpu().numpy()
     test_accuracy   = test_sum / float(TEST_SIZE)
     print("Test acc: %.2f" % test_accuracy)
     # ------------------------------------------------------------------------------------------------- #
