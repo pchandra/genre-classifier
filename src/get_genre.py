@@ -34,8 +34,9 @@ def main(argv):
     y, sr       = load(audio_path, mono=True, sr=22050)
     # ------------------------------- #
     ## GET CHUNKS OF AUDIO SPECTROGRAMS
-    S           = melspectrogram(y, sr).T
-    S           = S[:-1 * (S.shape[0] % 128)]
+    S           = melspectrogram(y=y, sr=sr).T
+    if S.shape[0] % 128 != 0:
+        S           = S[:-1 * (S.shape[0] % 128)]
     num_chunk   = S.shape[0] / 128
     data_chunks = np.split(S, num_chunk)
     # ------------------------------- #

@@ -34,8 +34,8 @@ def main():
     criterion   = torch.nn.CrossEntropyLoss()
     optimizer   = torch.optim.RMSprop(net.parameters(), lr=1e-4)
 
-    EPOCH_NUM   = 250
-    BATCH_SIZE  = 16
+    EPOCH_NUM   = 625
+    BATCH_SIZE  = 32
 
     for epoch in range(EPOCH_NUM):
         inp_train, out_train    = Variable(torch.from_numpy(x_train)).float().cuda(), Variable(torch.from_numpy(y_train)).long().cuda()
@@ -110,8 +110,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-

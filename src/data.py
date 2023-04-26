@@ -25,9 +25,10 @@ class Data():
             for j, track in enumerate(os.listdir(GENREPATH)):
                 TRACKPATH   = GENREPATH + track
                 print("%d.%s\t\t%s (%d)" % (i + 1, genre, TRACKPATH, j + 1))
-                y, sr       = load(TRACKPATH, mono=True)
+                y, sr       = load(TRACKPATH, mono=True, sr=22050)
                 S           = melspectrogram(y=y, sr=sr).T
-                S           = S[:-1 * (S.shape[0] % 128)]
+                if S.shape[0] % 128 != 0:
+                    S           = S[:-1 * (S.shape[0] % 128)]
                 num_chunk   = S.shape[0] / 128
                 data_chunks = np.split(S, num_chunk)
                 data_chunks = [(data, genre) for data in data_chunks]
@@ -48,4 +49,3 @@ class Data():
             self.raw_data   = pickle.load(infile)
         print("-> Data() object is loaded.")
         return
-

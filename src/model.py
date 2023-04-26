@@ -35,7 +35,7 @@ class genreNet(Module):
         self.fc2    = Linear(in_features=1024,  out_features=256)
         self.drop2  = Dropout(0.5)
 
-        self.fc3    = Linear(in_features=256,   out_features=10)
+        self.fc3    = Linear(in_features=256,   out_features=25)
 
     def forward(self, inp):
         x   = F.relu(self.bn1(self.conv1(inp)))
