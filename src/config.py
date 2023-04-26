@@ -10,6 +10,33 @@ GENRES      = [ 'blues',
                 'reggae',
                 'rock'  ]
 
+GENRES = [ 'boom-bap',
+           'bounce',
+           'concious-ungd',
+           'country-trap',
+           'crunk',
+           'dirty-south',
+           'drill',
+           'east-coast',
+           'emo-rap',
+           'footwork',
+           'g-funk',
+           'gangsta-rap',
+           'grime',
+           'horrorcore',
+           'hyphy',
+           'jazz-rap',
+           'latin-trap',
+           'lo-fi',
+           'mumble-rap',
+           'old-school',
+           'rap-rock',
+           'soulful',
+           'trap',
+           'uk-drill',
+           'west-coast' ]
+
+
 # DEFINE PATHS
 DATAPATH        =   '../data/'
 RAW_DATAPATH    =   '../utils/raw_data.pkl'
