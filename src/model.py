@@ -10,22 +10,22 @@ class genreNet(Module):
         super(genreNet, self).__init__()
 
         self.conv1  = Conv2d(in_channels=1,     out_channels=64,    kernel_size=3,  stride=1,   padding=1)
-        torch.nn.init.xavier_uniform(self.conv1.weight)
+        torch.nn.init.xavier_uniform_(self.conv1.weight)
         self.bn1    = BatchNorm2d(64)
         self.pool1  = MaxPool2d(kernel_size=2)
 
         self.conv2  = Conv2d(in_channels=64, out_channels=128,      kernel_size=3,  stride=1,   padding=1)
-        torch.nn.init.xavier_uniform(self.conv2.weight)
+        torch.nn.init.xavier_uniform_(self.conv2.weight)
         self.bn2    = BatchNorm2d(128)
         self.pool2  = MaxPool2d(kernel_size=2)
 
         self.conv3  = Conv2d(in_channels=128, out_channels=256,      kernel_size=3,  stride=1,   padding=1)
-        torch.nn.init.xavier_uniform(self.conv3.weight)
+        torch.nn.init.xavier_uniform_(self.conv3.weight)
         self.bn3    = BatchNorm2d(256)
         self.pool3  = MaxPool2d(kernel_size=4)
 
         self.conv4  = Conv2d(in_channels=256, out_channels=512,      kernel_size=3,  stride=1,   padding=1)
-        torch.nn.init.xavier_uniform(self.conv4.weight)
+        torch.nn.init.xavier_uniform_(self.conv4.weight)
         self.bn4    = BatchNorm2d(512)
         self.pool4  = MaxPool2d(kernel_size=4)
 
