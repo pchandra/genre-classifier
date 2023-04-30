@@ -2,7 +2,7 @@ import torch
 torch.manual_seed(123)
 from torch.nn import Module, Conv2d, MaxPool2d, Linear, Dropout, BatchNorm2d
 import torch.nn.functional as F
-
+from config import GENRES
 
 class genreNet(Module):
 
@@ -35,7 +35,7 @@ class genreNet(Module):
         self.fc2    = Linear(in_features=1024,  out_features=256)
         self.drop2  = Dropout(0.5)
 
-        self.fc3    = Linear(in_features=256,   out_features=25)
+        self.fc3    = Linear(in_features=256,   out_features=len(GENRES))
 
     def forward(self, inp):
         x   = F.relu(self.bn1(self.conv1(inp)))
