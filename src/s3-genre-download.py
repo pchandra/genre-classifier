@@ -11,7 +11,7 @@ s3 = boto3.resource('s3')
 config = TransferConfig(multipart_threshold=64 * 1024 * 1024)
 
 scratchfile = '/tmp/scratchfile'
-choppedfile = '/tmp/choppedfile'
+choppedfile = '/home/ubuntu/choppedfile'
 
 srcname = 'licenselounge-audiolab'
 src = s3.Bucket(srcname)
