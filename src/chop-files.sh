@@ -5,6 +5,7 @@ for i in *; do \
     cd "$i"
     mkdir -p out
     for j in *.mp3; do \
-	    ~/wav-mixer/trim-chopper.py -o out "$j"
-	done
+        echo "PROCESSING $i/$j"
+        ~/wav-mixer/trim-chopper.py -o out "$j"
+    done
 done
