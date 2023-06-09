@@ -98,7 +98,7 @@ GENRES['reggae'] = [ 'calypso',
                      'moombahton',
                      'music-of-jamaica',
                      'ragga',
-                     'reggae-en-espano',l
+                     'reggae-en-espano',
                      'reggae-fusion',
                      'reggae-rock',
                      'reggaestep',
