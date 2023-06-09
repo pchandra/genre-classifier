@@ -1,3 +1,4 @@
+GENRES = {}
 # 9 GENRES USED FOR CLASSIFICATION
 GENRES['core'] = [ 'blues',
                    'classical',
