@@ -36,4 +36,4 @@ for o in src.objects.all():
             os.makedirs(os.path.split(filename)[0], exist_ok=True)
             os.makedirs(os.path.split(chopped)[0], exist_ok=True)
             s3.Object(srcname, o.key).download_file(filename, Config=config)
-            os.system(f"cd {scratchfile}/jake/{sys.argv[1]}; ~/wav-mixer/trim-chopper.py -o \"{chopped}\" \"{filename}\"")
+            os.system(f"cd {scratchfile}/jake/{sys.argv[1]}; ~/wav-mixer/trim-chopper.py -o \"{os.path.split(chopped)[0]}\" \"{filename}\"")
