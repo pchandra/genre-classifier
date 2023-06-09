@@ -11,6 +11,7 @@ s3 = boto3.resource('s3')
 config = TransferConfig(multipart_threshold=64 * 1024 * 1024)
 
 scratchfile = '/tmp/scratchfile'
+choppedfile = '/tmp/choppedfile'
 
 srcname = 'licenselounge-audiolab'
 src = s3.Bucket(srcname)
@@ -32,4 +33,6 @@ for o in src.objects.all():
             print(f'*Found: {o.key}')
             filename = scratchfile + "/" + o.key
             os.makedirs(os.path.split(scratchfile + "/" + o.key)[0], exist_ok=True)
+            os.makedirs(os.path.split(choppedfile + "/" + o.key)[0], exist_ok=True)
             s3.Object(srcname, o.key).download_file(filename, Config=config)
+            os.system(f"cd {scratchfile}/jake/{sys.argv[1]}; ~/wav-mixer/trim-chopper.py -o {os.path.split(choppedfile + "/" + o.key)[0]} {filename}")
