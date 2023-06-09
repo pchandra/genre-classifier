@@ -4,6 +4,7 @@ import os
 import boto3
 import re
 import mimetypes
+import sys
 
 from boto3.s3.transfer import TransferConfig
 s3 = boto3.resource('s3')
@@ -22,7 +23,7 @@ files = [ ".*.mp3" ]
 pats = {}
 
 for f in files:
-    pats[f] = re.compile(f'jake/blues/{f}')
+    pats[f] = re.compile(f'jake/{sys.argv[1]}/{f}')
 
 for o in src.objects.all():
     for f in files:
