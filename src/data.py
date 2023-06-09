@@ -13,19 +13,20 @@ from config import RAW_DATAPATH
 
 class Data():
 
-    def __init__(self, genres, datapath):
-        self.raw_data   = None
-        self.GENRES     = genres
-        self.DATAPATH   = datapath
+    def __init__(self, genres, category, datapath):
+        self.raw_data = None
+        self.GENRES = genres
+        self.category = category
+        self.DATAPATH = datapath
         print("\n-> Data() object is initialized.")
 
     def make_raw_data(self):
         records = list()
         for i, genre in enumerate(self.GENRES):
-            GENREPATH = self.DATAPATH + genre + '/'
+            GENREPATH = self.DATAPATH + '/' + self.category + '/' + genre + '/'
             files = os.listdir(GENREPATH)
             random.shuffle(files)
-            files = [:200]
+            files = files[:200]
             for j, track in enumerate(files):
                 TRACKPATH   = GENREPATH + track
                 print("%d.%s\t\t%s (%d)" % (i + 1, genre, TRACKPATH, j + 1))
