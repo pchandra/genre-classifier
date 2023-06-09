@@ -1,15 +1,18 @@
 from config import GENRES, DATAPATH, MODELPATH
 from data import Data
 from set import Set
-
+import sys
 
 def main():
+    if len(sys.argv) != 2:
+        raise Exception("Bad args")
+    genre = sys.argv[1]
     # ------------------------------------------------------------------------------------------- #
     ## DATA
-    data = Data(GENRES, DATAPATH)
+    data = Data(GENRES[genre], DATAPATH)
     data.make_raw_data()
     data.save()
-    data = Data(GENRES, DATAPATH)
+    data = Data(GENRES[genre], DATAPATH)
     data.load()
     # ------------------------------------------------------------------------------------------- #
     ## SET
