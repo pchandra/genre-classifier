@@ -6,13 +6,13 @@ import sys
 def main():
     if len(sys.argv) != 2:
         raise Exception("Bad args")
-    genre = sys.argv[1]
+    category = sys.argv[1]
     # ------------------------------------------------------------------------------------------- #
     ## DATA
-    data = Data(GENRES[genre], DATAPATH)
+    data = Data(GENRES[genre], category, DATAPATH)
     data.make_raw_data()
     data.save()
-    data = Data(GENRES[genre], DATAPATH)
+    data = Data(GENRES[genre], category, DATAPATH)
     data.load()
     # ------------------------------------------------------------------------------------------- #
     ## SET
