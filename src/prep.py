@@ -9,10 +9,10 @@ def main():
     category = sys.argv[1]
     # ------------------------------------------------------------------------------------------- #
     ## DATA
-    data = Data(GENRES[genre], category, DATAPATH)
+    data = Data(GENRES[category], category, DATAPATH)
     data.make_raw_data()
     data.save()
-    data = Data(GENRES[genre], category, DATAPATH)
+    data = Data(GENRES[category], category, DATAPATH)
     data.load()
     # ------------------------------------------------------------------------------------------- #
     ## SET
