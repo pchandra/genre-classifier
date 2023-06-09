@@ -238,6 +238,6 @@ GENRES['rock'] = [ 'alternative-dance',
 
 # DEFINE PATHS
 DATAPATH        =   '/home/ubuntu/choppedfile/jake'
-RAW_DATAPATH    =   '../utils/raw_data.pkl'
-SET_DATAPATH    =   '../utils/set.pkl'
-MODELPATH       =   '../model/net.pt'
+RAW_DATAPATH    =   '/home/ubuntu/genre-classifier/utils/raw_data.pkl'
+SET_DATAPATH    =   '/home/ubuntu/genre-classifier/utils/set.pkl'
+MODELPATH       =   '/home/ubuntu/genre-classifier/model/net.pt'
