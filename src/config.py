@@ -237,7 +237,7 @@ GENRES['rock'] = [ 'alternative-dance',
                    'surf-music' ]
 
 # DEFINE PATHS
-DATAPATH        =   '/tmp/choppedfile/jake'
+DATAPATH        =   '/home/ubuntu/choppedfile/jake'
 RAW_DATAPATH    =   '../utils/raw_data.pkl'
 SET_DATAPATH    =   '../utils/set.pkl'
 MODELPATH       =   '../model/net.pt'
