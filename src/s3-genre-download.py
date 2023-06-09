@@ -32,7 +32,8 @@ for o in src.objects.all():
         if m is not None:
             print(f'*Found: {o.key}')
             filename = scratchfile + "/" + o.key
-            os.makedirs(os.path.split(scratchfile + "/" + o.key)[0], exist_ok=True)
-            os.makedirs(os.path.split(choppedfile + "/" + o.key)[0], exist_ok=True)
+            chopped = choppedfile + "/" + o.key
+            os.makedirs(os.path.split(filename)[0], exist_ok=True)
+            os.makedirs(os.path.split(chopped)[0], exist_ok=True)
             s3.Object(srcname, o.key).download_file(filename, Config=config)
-            os.system(f"cd {scratchfile}/jake/{sys.argv[1]}; ~/wav-mixer/trim-chopper.py -o {os.path.split(choppedfile + "/" + o.key)[0]} {filename}")
+            os.system(f"cd {scratchfile}/jake/{sys.argv[1]}; ~/wav-mixer/trim-chopper.py -o \"{chopped}\" \"{filename}\"")
