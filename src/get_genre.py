@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 import sys
+import json
 
 from collections import Counter
 from sklearn.preprocessing import LabelEncoder
@@ -19,10 +20,10 @@ warnings.filterwarnings("ignore")
 
 def main(argv):
 
-    if len(argv) != 1:
-        print("Usage: python3 get_genre.py audiopath")
+    if len(argv) != 2:
+        print("Usage: python3 get_genre.py model audiopath")
         exit()
-
+    MODELPATH = argv[0]
     le = LabelEncoder().fit(GENRES)
     # ------------------------------- #
     ## LOAD TRAINED GENRENET MODEL
@@ -30,14 +31,17 @@ def main(argv):
     net.load_state_dict(torch.load(MODELPATH, map_location='cpu'))
     # ------------------------------- #
     ## LOAD AUDIO
-    audio_path  = argv[0]
+    audio_path  = argv[1]
     y, sr       = load(audio_path, mono=True, sr=22050)
+    print(f"SHAPE Y: {y.shape}")
     # ------------------------------- #
     ## GET CHUNKS OF AUDIO SPECTROGRAMS
     S           = melspectrogram(y=y, sr=sr).T
+    print(f"SHAPE S: {S.shape}")
     if S.shape[0] % 128 != 0:
         S           = S[:-1 * (S.shape[0] % 128)]
     num_chunk   = S.shape[0] / 128
+    print(f"CHUNKS: {num_chunk}")
     data_chunks = np.split(S, num_chunk)
     # ------------------------------- #
     ## CLASSIFY SPECTROGRAMS
@@ -49,13 +53,14 @@ def main(argv):
         pred_index              = pred_index.data.numpy()
         pred_val                = np.exp(pred_val.data.numpy()[0])
         pred_genre              = le.inverse_transform(pred_index).item()
+        print(f"{i},{pred_genre},{pred_val}")
         if pred_val >= 0.5:
             genres.append(pred_genre)
     # ------------------------------- #
     s           = float(sum([v for k,v in dict(Counter(genres)).items()]))
     pos_genre   = sorted([(k, v/s*100 ) for k,v in dict(Counter(genres)).items()], key=lambda x:x[1], reverse=True)
-    for genre, pos in pos_genre:
-        print("%10s: \t%.2f\t%%" % (genre, pos))
+    output = json.dumps(dict(pos_genre))
+    print(output)
     return
 
 if __name__ == '__main__':
