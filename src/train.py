@@ -9,9 +9,13 @@ from set import Set
 
 
 def main():
+    if len(sys.argv) != 2:
+        raise Exception("Bad args")
+    category = sys.argv[1]
+
     # ------------------------------------------------------------------------------------------- #
     ## DATA
-    data = Data(GENRES, DATAPATH)
+    data = Data(GENRES[category], DATAPATH)
     data.load()
     # ------------------------------------------------------------------------------------------- #
     # ------------------------------------------------------------------------------------------- #
@@ -28,7 +32,7 @@ def main():
     VALID_SIZE  = len(x_valid)
     TEST_SIZE   = len(x_test)
 
-    net = genreNet()
+    net = genreNet(GENRES[category])
     net.cuda()
 
     criterion   = torch.nn.CrossEntropyLoss()
