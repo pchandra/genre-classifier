@@ -1,0 +1,6 @@
+Epoch: 998              Train loss : 0.95               Valid loss : 1.55               Train acc : 0.70                Valid acc : 0.54
+Epoch: 999              Train loss : 0.95               Valid loss : 1.59               Train acc : 0.69                Valid acc : 0.53
+Epoch: 1000             Train loss : 0.96               Valid loss : 1.55               Train acc : 0.70                Valid acc : 0.55
+-> ptorch model is saved.
+Test acc: 0.54
+
