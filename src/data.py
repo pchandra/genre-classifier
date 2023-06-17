@@ -26,7 +26,7 @@ class Data():
             GENREPATH = self.DATAPATH + '/' + self.category + '/' + genre + '/'
             files = os.listdir(GENREPATH)
             random.shuffle(files)
-            files = files[:200]
+            files = files[:150]
             for j, track in enumerate(files):
                 TRACKPATH   = GENREPATH + track
                 print("%d.%s\t\t%s (%d)" % (i + 1, genre, TRACKPATH, j + 1))
