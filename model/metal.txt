@@ -1,5 +1,13 @@
-Epoch: 998              Train loss : 1.21               Valid loss : 2.23               Train acc : 0.62                Valid acc : 0.36
-Epoch: 999              Train loss : 1.20               Valid loss : 2.33               Train acc : 0.57                Valid acc : 0.35
-Epoch: 1000             Train loss : 1.34               Valid loss : 2.27               Train acc : 0.57                Valid acc : 0.35
+Epoch: 990              Train loss : 0.53               Valid loss : 1.51               Train acc : 0.85                Valid acc : 0.56
+Epoch: 991              Train loss : 0.52               Valid loss : 1.53               Train acc : 0.84                Valid acc : 0.56
+Epoch: 992              Train loss : 0.53               Valid loss : 1.53               Train acc : 0.85                Valid acc : 0.56
+Epoch: 993              Train loss : 0.51               Valid loss : 1.51               Train acc : 0.86                Valid acc : 0.57
+Epoch: 994              Train loss : 0.51               Valid loss : 1.50               Train acc : 0.86                Valid acc : 0.57
+Epoch: 995              Train loss : 0.49               Valid loss : 1.48               Train acc : 0.86                Valid acc : 0.58
+Epoch: 996              Train loss : 0.48               Valid loss : 1.49               Train acc : 0.86                Valid acc : 0.57
+Epoch: 997              Train loss : 0.48               Valid loss : 1.55               Train acc : 0.86                Valid acc : 0.57
+Epoch: 998              Train loss : 0.49               Valid loss : 1.60               Train acc : 0.84                Valid acc : 0.54
+Epoch: 999              Train loss : 0.52               Valid loss : 1.62               Train acc : 0.83                Valid acc : 0.56
+Epoch: 1000             Train loss : 0.56               Valid loss : 1.69               Train acc : 0.81                Valid acc : 0.53
 -> ptorch model is saved.
-Test acc: 0.35
+Test acc: 0.53
