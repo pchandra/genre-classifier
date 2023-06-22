@@ -43,6 +43,10 @@ def main(argv):
         S           = S[:-1 * (S.shape[0] % 128)]
     num_chunk   = S.shape[0] / 128
     #print(f"CHUNKS: {num_chunk}")
+    # Short circuit if input is too tiny
+    if num_chunk == 0:
+        print("{}")
+        return
     data_chunks = np.split(S, num_chunk)
     # ------------------------------- #
     ## CLASSIFY SPECTROGRAMS
