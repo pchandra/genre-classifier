@@ -5,6 +5,7 @@ import boto3
 import re
 import mimetypes
 import sys
+import shlex
 
 from boto3.s3.transfer import TransferConfig
 s3 = boto3.resource('s3')
@@ -36,4 +37,4 @@ for o in src.objects.all():
             os.makedirs(os.path.split(filename)[0], exist_ok=True)
             os.makedirs(os.path.split(chopped)[0], exist_ok=True)
             s3.Object(srcname, o.key).download_file(filename, Config=config)
-            os.system(f"cd {scratchfile}/jake/{sys.argv[1]}; ~/wav-mixer/trim-chopper.py -t 10 -s 120 -m 1 -o \"{os.path.split(chopped)[0]}\" \'{filename}\'")
+            os.system(f"cd {scratchfile}/jake/{sys.argv[1]}; ~/wav-mixer/trim-chopper.py -t 10 -s 120 -m 1 -o \"{os.path.split(chopped)[0]}\" {shlex.quote(filename)}")
