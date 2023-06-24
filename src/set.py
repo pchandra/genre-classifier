@@ -27,9 +27,16 @@ class Set():
         train_records, valid_records, test_records = list(), list(), list()
         for i, genre in enumerate(self.data.GENRES):
             genre_df    = df[df['genre'] == genre]
-            train_records.append(genre_df.iloc[:700].values)
-            valid_records.append(genre_df.iloc[700:900].values)
-            test_records.append(genre_df.iloc[900:].values)
+            total = len(genre_df.iloc)
+            p70 = int(total*0.7)
+            p90 = int(total*0.9)
+            print(f"\n-> Genre {genre} has {total} records")
+            print(f" -> Using {p70} for train_records")
+            print(f" -> Using {p90-p70} for valid_records")
+            print(f" -> Using {total-p90} for test_records")
+            train_records.append(genre_df.iloc[:p70].values)
+            valid_records.append(genre_df.iloc[p70:p90].values)
+            test_records.append(genre_df.iloc[p90:].values)
 
         train_records   = shuffle([record for genre_records in train_records    for record in genre_records])
         valid_records   = shuffle([record for genre_records in valid_records    for record in genre_records])
