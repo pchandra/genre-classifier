@@ -27,7 +27,7 @@ class Set():
         train_records, valid_records, test_records = list(), list(), list()
         for i, genre in enumerate(self.data.GENRES):
             genre_df    = df[df['genre'] == genre]
-            total = len(genre_df.iloc)
+            total = len(genre_df)
             p70 = int(total*0.7)
             p90 = int(total*0.9)
             print(f"\n-> Genre {genre} has {total} records")
