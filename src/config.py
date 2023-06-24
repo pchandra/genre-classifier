@@ -10,14 +10,14 @@ GENRES['core'] = [ 'blues',
                    'reggae',
                    'rock' ]
 
-GENRES['mood'] = [ 'angry'
-                   'chill'
-                   'energized'
-                   'funny'
-                   'happy'
-                   'inspired'
-                   'loved'
-                   'sad'
+GENRES['mood'] = [ 'angry',
+                   'chill',
+                   'energized',
+                   'funny',
+                   'happy',
+                   'inspired',
+                   'loved',
+                   'sad',
                    'tense' ]
 
 GENRES['blues'] = [ 'blues-rock',
