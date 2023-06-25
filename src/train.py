@@ -1,3 +1,4 @@
+import os
 import sys
 import torch
 torch.manual_seed(123)
@@ -35,6 +36,8 @@ def main():
 
     net = genreNet(GENRES[category])
     net.cuda()
+    if os.path.exists(MODELPATH):
+        net.load_state_dict(torch.load(MODELPATH))
 
     criterion   = torch.nn.CrossEntropyLoss()
     optimizer   = torch.optim.RMSprop(net.parameters(), lr=1e-4)
