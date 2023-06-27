@@ -20,6 +20,9 @@ GENRES['mood'] = [ 'angry',
                    'sad',
                    'tense' ]
 
+GENRES['vocals'] = [ 'male',
+                     'female' ]
+
 GENRES['blues'] = [ 'blues-rock',
                     'delta-blues',
                     'louisiana-blues',
