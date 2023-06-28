@@ -24,13 +24,20 @@ class Set():
         df  = self.data.raw_data.copy()
         df  = shuffle(df)
 
+        lowest = None
+        for genre in self.data.GENRES:
+            genre_df = df[df['genre'] == genre]
+            lowest = len(genre_df) if lowest is None or len(genre_df) < lowest else lowest
+
         train_records, valid_records, test_records = list(), list(), list()
         for i, genre in enumerate(self.data.GENRES):
-            genre_df    = df[df['genre'] == genre]
+            genre_df = df[df['genre'] == genre]
+            orig_count = len(genre_df)
+            genre_df = genre_df.iloc[:lowest]
             total = len(genre_df)
             p70 = int(total*0.7)
             p90 = int(total*0.9)
-            print(f"\n-> Genre {genre} has {total} records")
+            print(f"\n-> Genre {genre} has {orig_count} records (using {lowest})")
             print(f" -> Using {p70} for train_records")
             print(f" -> Using {p90-p70} for valid_records")
             print(f" -> Using {total-p90} for test_records")
