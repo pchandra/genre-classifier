@@ -129,8 +129,7 @@ GENRES['hiphop'] = [ 'alternative-hip-hop',
                      'old-school',
                      'pop-rap',
                      'rap-rock',
-                     'southern-hip-hop',
-                     'trap-music' ]
+                     'southern-hip-hop' ]
 
 GENRES['jazz'] = [ 'bebop',
                    'jazz-fusion',
