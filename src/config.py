@@ -224,7 +224,7 @@ GENRES['rock'] = [ 'blues-rock',
                    'pop-rock' ]
 
 # DEFINE PATHS
-DATAPATH        =   '/home/ubuntu/choppedfile/jake'
+DATAPATH        =   '/home/ubuntu/choppedfile/train'
 RAW_DATAPATH    =   '/home/ubuntu/genre-classifier/utils/raw_data.pkl'
 SET_DATAPATH    =   '/home/ubuntu/genre-classifier/utils/set.pkl'
 MODELPATH       =   '/home/ubuntu/genre-classifier/model/net.pt'
