@@ -200,7 +200,7 @@ GENRES['metal'] = [ 'alternative-metal',
                     'symphonic-metal' ]
 
 GENRES['rock'] = [ 'blues-rock',
-                   'country-rock'
+                   'country-rock',
                    'heavy-metal',
                    'indie-rock',
                    'acoustic-rock',
