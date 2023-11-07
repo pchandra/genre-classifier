@@ -42,7 +42,7 @@ def main():
     criterion   = torch.nn.CrossEntropyLoss()
     optimizer   = torch.optim.RMSprop(net.parameters(), lr=1e-4)
 
-    EPOCH_NUM   = 1000
+    EPOCH_NUM   = 1500
     BATCH_SIZE  = 32
 
     for epoch in range(EPOCH_NUM):
