@@ -1,13 +1,38 @@
-Epoch: 990              Train loss : 0.94               Valid loss : 1.90               Train acc : 0.68                Valid acc : 0.45
-Epoch: 991              Train loss : 0.98               Valid loss : 1.78               Train acc : 0.70                Valid acc : 0.47
-Epoch: 992              Train loss : 0.93               Valid loss : 1.76               Train acc : 0.71                Valid acc : 0.47
-Epoch: 993              Train loss : 0.90               Valid loss : 1.74               Train acc : 0.73                Valid acc : 0.48
-Epoch: 994              Train loss : 0.86               Valid loss : 1.74               Train acc : 0.73                Valid acc : 0.48
-Epoch: 995              Train loss : 0.86               Valid loss : 1.78               Train acc : 0.73                Valid acc : 0.47
-Epoch: 996              Train loss : 0.88               Valid loss : 1.69               Train acc : 0.74                Valid acc : 0.49
-Epoch: 997              Train loss : 0.84               Valid loss : 1.73               Train acc : 0.74                Valid acc : 0.49
-Epoch: 998              Train loss : 0.84               Valid loss : 1.68               Train acc : 0.75                Valid acc : 0.49
-Epoch: 999              Train loss : 0.80               Valid loss : 1.72               Train acc : 0.74                Valid acc : 0.50
-Epoch: 1000             Train loss : 0.82               Valid loss : 1.74               Train acc : 0.74                Valid acc : 0.48
+Epoch: 1465             Train loss : 0.06               Valid loss : 1.81          Train acc : 0.99                Valid acc : 0.57                                                     Epoch: 1466             Train loss : 0.06               Valid loss : 1.90          Train acc : 0.99                Valid acc : 0.58
+Epoch: 1467             Train loss : 0.06               Valid loss : 1.88          Train acc : 0.99                Valid acc : 0.58
+Epoch: 1468             Train loss : 0.06               Valid loss : 1.88          Train acc : 0.99                Valid acc : 0.58
+Epoch: 1469             Train loss : 0.07               Valid loss : 1.92          Train acc : 0.99                Valid acc : 0.56
+Epoch: 1470             Train loss : 0.07               Valid loss : 1.95          Train acc : 0.98                Valid acc : 0.56
+Epoch: 1471             Train loss : 0.07               Valid loss : 1.95          Train acc : 0.98                Valid acc : 0.57
+Epoch: 1472             Train loss : 0.07               Valid loss : 1.94          Train acc : 0.98                Valid acc : 0.56
+Epoch: 1473             Train loss : 0.08               Valid loss : 1.97          Train acc : 0.98                Valid acc : 0.58
+Epoch: 1474             Train loss : 0.08               Valid loss : 1.87          Train acc : 0.99                Valid acc : 0.58
+Epoch: 1475             Train loss : 0.07               Valid loss : 1.94          Train acc : 0.99                Valid acc : 0.57
+Epoch: 1476             Train loss : 0.07               Valid loss : 1.89          Train acc : 0.98                Valid acc : 0.57
+Epoch: 1477             Train loss : 0.07               Valid loss : 1.92          Train acc : 0.98                Valid acc : 0.59
+Epoch: 1478             Train loss : 0.08               Valid loss : 2.00          Train acc : 0.98                Valid acc : 0.56
+Epoch: 1479             Train loss : 0.09               Valid loss : 2.02          Train acc : 0.97                Valid acc : 0.55
+Epoch: 1480             Train loss : 0.12               Valid loss : 2.10          Train acc : 0.97                Valid acc : 0.55
+Epoch: 1481             Train loss : 0.11               Valid loss : 2.05          Train acc : 0.96                Valid acc : 0.57
+Epoch: 1482             Train loss : 0.14               Valid loss : 2.17          Train acc : 0.96                Valid acc : 0.54
+Epoch: 1483             Train loss : 0.15               Valid loss : 2.15          Train acc : 0.95                Valid acc : 0.54
+Epoch: 1484             Train loss : 0.17               Valid loss : 2.30          Train acc : 0.93                Valid acc : 0.51
+Epoch: 1485             Train loss : 0.23               Valid loss : 2.98          Train acc : 0.85                Valid acc : 0.44
+Epoch: 1486             Train loss : 0.48               Valid loss : 4.27          Train acc : 0.50                Valid acc : 0.30
+Epoch: 1487             Train loss : 2.57               Valid loss : 3.27          Train acc : 0.47                Valid acc : 0.31
+Epoch: 1488             Train loss : 2.15               Valid loss : 2.94          Train acc : 0.41                Valid acc : 0.27
+Epoch: 1489             Train loss : 1.89               Valid loss : 2.79          Train acc : 0.50                Valid acc : 0.33
+Epoch: 1490             Train loss : 1.69               Valid loss : 2.39          Train acc : 0.58                Valid acc : 0.35
+Epoch: 1491             Train loss : 1.34               Valid loss : 2.11          Train acc : 0.71                Valid acc : 0.41
+Epoch: 1492             Train loss : 0.94               Valid loss : 2.52          Train acc : 0.69                Valid acc : 0.42
+Epoch: 1493             Train loss : 0.94               Valid loss : 2.59          Train acc : 0.65                Valid acc : 0.40
+Epoch: 1494             Train loss : 1.20               Valid loss : 2.48          Train acc : 0.64                Valid acc : 0.39
+Epoch: 1495             Train loss : 1.22               Valid loss : 2.10          Train acc : 0.75                Valid acc : 0.44
+Epoch: 1496             Train loss : 0.81               Valid loss : 1.84          Train acc : 0.86                Valid acc : 0.49
+Epoch: 1497             Train loss : 0.52               Valid loss : 1.78          Train acc : 0.92                Valid acc : 0.49
+Epoch: 1498             Train loss : 0.33               Valid loss : 1.66          Train acc : 0.96                Valid acc : 0.55
+Epoch: 1499             Train loss : 0.23               Valid loss : 1.60          Train acc : 0.97                Valid acc : 0.56
+Epoch: 1500             Train loss : 0.18               Valid loss : 1.59          Train acc : 0.97                Valid acc : 0.57
 -> ptorch model is saved.
-Test acc: 0.47
+Test acc: 0.58
+ubuntu@ip-172-31-64-93:~/genre-classifier/src$
